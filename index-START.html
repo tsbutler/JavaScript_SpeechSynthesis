@@ -44,6 +44,10 @@
       .join('');
       voicesDropdown.innerHTML =voiceOptions;
   }  
+
+  function setVoice() {
+    console.log('changing voice');
+  }
   speechSynthesis.addEventListener('voicesChanged', populateVoices);
 </script>
 
