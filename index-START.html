@@ -52,11 +52,14 @@
 
   function toggle(startOver = true) {
     speechSynthesis.cancel();
-    speechSynthesis.speak(msg);
+    if(startOver){
+      speechSynthesis.speak(msg);
+    }
   }
 
   speechSynthesis.addEventListener('voicesChanged', populateVoices);
   voicesDropdown.addEventListener('change', setVoice);
+  options.forEach(option => option.addEventListener('change', setOption));
 </script>
 
 </body>
